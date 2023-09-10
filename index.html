@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    
+    <title>Page title</title>
+</head>
+<body>
+    <header>
+        <p> <<-- </p>
+        <h1>PROFILE PAGE</h1>
+          <p> <<-- </p>
+    </header>
+    
+    <main>
+            <h2 data-testid="slackUserName">Lenaa</h2>
+        
+            <img src="IMG_20230909_180051.jpg" data-testid="slackDisplayImage" alt="lenaa">
+        
+        <p id="demo" data-testid="currentDayOfTheWeek">Sunday</p>
+        
+        <p id="time" data-testid="currentUTCTime">2023-09-10T08:02:03.276Z</p>
+        
+        <h2 class="track" data-testid="myTrack"> Frontend</h2>     
+    </main>
+   
+   <footer>
+       <p><strong>Link to my Github hosted page:-</strong></p>
+       <a href=""></a>
+   </footer> 
+   
+ <script>
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+const r = new Date();
+let day = weekday[r.getDay()];
+document.getElementById("demo").innerHTML = day;
+
+
+//const d = new Date();
+//let text = d.toISOString();
+//document.getElementById("time").innerHTML = text;
+
+
+
+let ms = Date.now();
+document.getElementById("time").innerHTML = ms;
+
+</script>
+  
+</body>
+</html>
